@@ -1,4 +1,4 @@
-////////////////////////////////////DESAFIO /////////////////////////////////////////
+////////////////////////////////////>> DESAFIO AULA <</////////////////////////////////////////
 
 // Alerta de boas vindas
 //alert("Boas vindas ao nosso site");
@@ -27,15 +27,20 @@
 //    alert("Você não pode tirar habilitação");
 //}
 
-//////////////////////////////////CONCLUIDO/////////////////////////////////////////
+//////////////////////////////////>> CONCLUIDO <</////////////////////////////////////////
 
 
 
 alert('Bem vindo ao jogo: numero secreto do Schneider. Vamos ver se você consegue adivinhar qual é o número secreto que estou pensando.');
     
-let numeroSecreto = 29;
+let numeroSecreto = 7;
+console.log(numeroSecreto)
 let numeroChute = prompt('Digite numero para seu chute');
 
 if (numeroSecreto == numeroChute) {
-    console.log('Parabéns, você acertou o número secreto!');
-};
+    alert(`Parabéns, você acertou o número secreto! ${numeroSecreto}`);
+} else {
+    alert('Que pena, você errou o número secreto!');
+}
+
+

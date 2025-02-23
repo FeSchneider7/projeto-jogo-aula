@@ -33,7 +33,8 @@
 
 alert('Bem vindo ao jogo: numero secreto (aleatório) do Schneider. Vamos ver se você consegue adivinhar qual é o número secreto que estou pensando.');
     
-let numeroSecreto = parseInt(Math.random() * 100 + 1);
+let numeroMaximo = 100;
+let numeroSecreto = parseInt(Math.random() * numeroMaximo + 1);
 console.log(numeroSecreto);
 let numeroChute;
 let tentativas = 1;
@@ -41,7 +42,7 @@ let tentativas = 1;
 //while = enquanto (chute nao for igual a numero secreto) faça
 
 while (numeroChute != numeroSecreto) {
-    numeroChute = prompt('Digite um numero para seu chute entre 1 e 100:');
+    numeroChute = prompt(`Digite um numero para seu chute entre 1 e ${numeroMaximo}:`);
    
     if (numeroSecreto == numeroChute) {
         break;

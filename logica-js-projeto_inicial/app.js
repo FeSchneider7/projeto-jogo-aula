@@ -31,20 +31,20 @@
 
 
 
-alert('Bem vindo ao jogo: numero secreto do Schneider. Vamos ver se você consegue adivinhar qual é o número secreto que estou pensando.');
+alert('Bem vindo ao jogo: numero secreto (aleatório) do Schneider. Vamos ver se você consegue adivinhar qual é o número secreto que estou pensando.');
     
-let numeroSecreto = 7;
+let numeroSecreto = parseInt(Math.random() * 100 + 1);
 console.log(numeroSecreto);
 let numeroChute;
 let tentativas = 1;
 
-//while = enquanto
+//while = enquanto (chute nao for igual a numero secreto) faça
 
 while (numeroChute != numeroSecreto) {
-    numeroChute = prompt('Digite um numero para seu chute');
+    numeroChute = prompt('Digite um numero para seu chute entre 1 e 100:');
    
     if (numeroSecreto == numeroChute) {
-        alert(`Parabéns, você acertou o número secreto! ${numeroSecreto} com ${tentativas} tentativas`);
+        break;
     } else { 
          if (numeroSecreto > numeroChute) {
             alert(`ERROU! DICA: O numero secreto é maior do que ${numeroChute}`);
@@ -55,6 +55,17 @@ while (numeroChute != numeroSecreto) {
         tentativas++;
     }
 }
+
+let palavraTentativa = tentativas > 1 ? 'tentativas' : 'tentativa';
+
+//if (tentativas == 1) {
+ //   alert(`Parabéns, você acertou o número secreto! ${numeroSecreto} com ${tentativas} tentativa`);
+//} else 
+alert(`Parabéns, você acertou o número secreto! ${numeroSecreto} com ${tentativas} ${palavraTentativa}`);
+
+
+
+
 
 ////////////////////////////////////////////////EXERCICIO/////////////////////////////////
 
